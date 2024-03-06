@@ -70,9 +70,32 @@ footer {
 }
 
 /* Page specific styles */
+/* Home page */
+/* Title */
+.home-title {
+  text-align: center;
+  background-color: #5c6269;
+}
 
-/* Home page styles */
+/* Intro section */
 .home-intro {
   text-align: center;
+  background-color: #5c6269;
+}
+
+.home-intro h1 {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+  padding: 20px 0;
+}
+
+/* Article */
+.home-article {
+  background-color: #5c6269;
+  color: #fff;
+  padding: 20px;
   margin: 20px 0;
 }
+
+/* About page */
