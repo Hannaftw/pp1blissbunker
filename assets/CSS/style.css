@@ -1,0 +1,78 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: blanchedalmond;
+  margin: 10px;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+h1 {
+  text-align: center;
+  color: #007bff;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h2 {
+  text-align: center;
+  color: #7e4166;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
+} 
+
+h3 {
+  text-align: left;
+  color: blueviolet;
+}
+
+p {
+  background-color: aquamarine;
+}
+
+article {
+  background-color: #7e4166;
+}
+
+a {
+  color: #5c6269;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+  background-color: #007bff;
+  text-align: right;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px 0 0;
+}
+
+/* Footer */
+footer {
+  background-color: #398962;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+}
+
+/* Page specific styles */
+
+/* Home page styles */
+.home-intro {
+  text-align: center;
+  margin: 20px 0;
+}
