@@ -14,21 +14,87 @@
     name="description"
     content="a website for a fictional hideaway, where you can escape from the world and all its problems">
   
-  <!-- CSS stylesheet internal link -->
-  <link
-    rel="stylesheet"
-    href="assets/CSS/style.css" />
-
   <!-- Title -->
   <title>
     The BlissBunker...
   </title>
+  <!-- CSS stylesheet internal link -->
+    link
+    rel="stylesheet"
+    href="assets/CSS/style.css" />
 </head>
 
 <body>
+  <header> 
   <!-- Navigation bar section -->
-  <header>
     <nav>
+      <section class="navbar">
+        <!-- h2 added hidden for semantic HTML -->
+        <h2 class="hidden">
+          Header navigation bar
+        </h2>
+        <!-- NOTE / TO DO should I specify and comment  -->
+        <!-- NOTE / TO DO make logo and link it to home 
+          <a 
+          href="index.html"
+          aria-label="The page that is active Home">
+          <img
+            src="assets/images/navicon.webp"
+            alt="Logo for The BlissBunker"
+            id="navlogo"
+            aria-label="Logo for the site, The BlissBunker, clicking takes you to page home" />
+        </a>-->
+
+        <!-- Dropdown menu for mobile -->
+        <input
+          type="checkbox"
+          id="menu-icon"
+          class="menu-icon" />
+        <label
+          for="menu-icon"
+          class="menu-icon-label">
+          <i 
+            class="fa-solid fa-bars">
+          </i>
+        </label>
+
+        <!-- Navigation bar links for screen sizes tablet and larger -->
+        <!-- h3 added hidden for semantic HTML -->
+        <h3 class="hidden">Navigation Bar links</h3>
+        <ul class="nav-links">
+          <li>
+            <a
+              href="index.html"
+              class="active"
+              aria-label="The page that is active Home">
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="bunker.html"
+              aria-label="navigate to the page The Bunker">
+              The Bunker
+            </a>
+          </li>
+          <li>
+            <a
+              href="about.html"
+              aria-label="navigate to the page About">
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="articles.html"
+              aria-label="navigate to the page Articles">
+              Articles
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </header>
       <section class="navbar">
       </section>
     </nav>
@@ -41,29 +107,32 @@
       <h1>
         The Bliss Bunker
       </h1>
-      <h3>
-        Hide from this dumpster fire of a world, social media and fake news
-      </h3>
+      <h2>
+        - A refuge from the world, 
+       <br>
+      </h2>
     </section>
 
-    <!-- Hero image section -->
-    <!-- TO DO/NOTE replace placeholder image -->
-    <section class="home-heroimg">
-      <img
-        src="images/hero.jpg"
-        alt="A beautiful view of a sunset over a calm ocean" 
-        aria-label="A beautiful view of a sunset over a calm ocean"/>
+    <!-- Hero and introduction section -->
+    <section class="home-hero">
+      <div class="home-heroimg">
+        <!-- NOTE / TO DO add image and alt text
+        <img 
+          src="images/hero.jpg"
+          alt="" 
+          aria-label=""/>-->
+      </div>
     </section>
-
-    <!-- Introduction section -->
-    <section class="home-intro">
-      <p>
-        <h3>
-          Welcome traveler, here, you can relax and unwind, and let go of all your worries. 
-          <br>
-          Take a break from the world and all its problems, and let the Bliss Bunker take care of you.
-        </h3>   
-      </p>
+      <!-- Introduction section -->
+      <div class="home-introtext">
+        <p>
+          <h3>
+            Welcome traveler, here, you can relax and unwind, and let go of all your worries. 
+            <br>
+            Take a break from the world and all its problems, and let the Bliss Bunker take care of you.
+          </h3>   
+        </p>
+      </div>
     </section>
 
     <!-- Article section -->
@@ -89,5 +158,11 @@
       </p>
     </div>
   </footer>
+  
+  <!-- JavaScript for FontAwesome kit - credit further in README.md -->
+  <script 
+    src="https://kit.fontawesome.com/643645f09b.js" 
+    crossorigin="anonymous">
+  </script>
 </body>
 </html>
