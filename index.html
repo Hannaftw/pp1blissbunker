@@ -19,21 +19,20 @@
     The BlissBunker...
   </title>
   <!-- CSS stylesheet internal link -->
-    link
+    <link
     rel="stylesheet"
     href="assets/CSS/style.css" />
 </head>
 
 <body>
   <header> 
-  <!-- Navigation bar section -->
-    <nav>
+    <!-- Navigation bar section -->
+    
       <section class="navbar">
         <!-- h2 added hidden for semantic HTML -->
         <h2 class="hidden">
           Header navigation bar
         </h2>
-        <!-- NOTE / TO DO should I specify and comment  -->
         <!-- NOTE / TO DO make logo and link it to home 
           <a 
           href="index.html"
@@ -45,7 +44,7 @@
             aria-label="Logo for the site, The BlissBunker, clicking takes you to page home" />
         </a>-->
 
-        <!-- Dropdown menu for mobile -->
+        <!-- Dropdown menu for mobile screens less than 768px -->
         <input
           type="checkbox"
           id="menu-icon"
@@ -58,9 +57,12 @@
           </i>
         </label>
 
-        <!-- Navigation bar links for screen sizes tablet and larger -->
+        <!-- Navigation bar links for screen sizes tablet and larger, min 768px -->
         <!-- h3 added hidden for semantic HTML -->
-        <h3 class="hidden">Navigation Bar links</h3>
+        <nav>
+        <h3 class="hidden">
+          Navigation Bar links
+        </h3>
         <ul class="nav-links">
           <li>
             <a
@@ -95,11 +97,7 @@
       </nav>
     </section>
   </header>
-      <section class="navbar">
-      </section>
-    </nav>
-  </header>
-  
+      
   <!-- Main section -->
   <main>
     <!-- Title section -->
@@ -151,13 +149,48 @@
   </main>
 
   <!-- NOTE/TO DO replace placeholder footer text -->
-  <footer>
-    <div class="home-footertext">
-      <p>
-        Created by: Hanna Bergsten Copyright: 2024
+  <!-- Footer section -->
+    <footer>
+        <p>
+        Made by
+        <a
+          href="https://github.com/Hannaftw"
+          target="_blank"
+          rel="noopener"
+          aria-label="Visit Hannaftw's GitHub page (opens in a new tab)">
+          Hanna Bergsten
+        </a>
       </p>
-    </div>
-  </footer>
+      <ul id="footer-icons">
+        <li>
+          <a
+            href="https://www.github.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit our github page (opens in a new tab)">
+            <i class="fa-brands fa-github red-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit our LinkedIn page (opens in a new tab)">
+            <i class="fa-brands fa-linkedin red-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit our Instagram page (opens in a new tab)">
+            <i class="fa-brands fa-instagram red-icon"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
   
   <!-- JavaScript for FontAwesome kit - credit further in README.md -->
   <script 

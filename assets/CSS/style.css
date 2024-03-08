@@ -1,104 +1,250 @@
-/* General styles */
+/* imported fonts from google fonts, Montserrat and Playfair */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Main styles */
+* {
+  background-color: #000;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  line-height: 1.5;
+  font-weight: 500;
+  padding: 10px;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  background-color: blanchedalmond;
-  margin: 10px;
-  font-size: 12px;
-  line-height: 1.25;
+  display: block;
 }
 
-h1 {
-  text-align: center;
-  color: #007bff;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-h2 {
-  text-align: center;
-  color: #7e4166;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.2;
-} 
-
-h3 {
-  text-align: left;
-  color: blueviolet;
-}
-
-p {
-  background-color: aquamarine;
-}
-
-article {
-  background-color: #7e4166;
-}
-
-a {
-  color: #5c6269;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Navigation */
-nav {
-  background-color: #007bff;
-  text-align: right;
-}
-
-nav ul {
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px 0 0;
-}
-
-/* Footer */
-footer {
-  background-color: #398962;
-  color: #fff;
-  position: absolute;
-  width: 100%;
-}
-
+/* For elements not displayed to user */
 .hidden {
   display: none;
 }
+
+/* Navigation bar styles */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+nav {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  background-color: #000;
+  color: #fff;
+  z-index: 999;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  margin: 5px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.active {
+  color: #ff0000;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: solid 1px #fff;
+  padding: 3px;
+}
+
+.nav-links li {
+  margin-bottom: 10px;
+  border-bottom: #fff solid 1px;
+  padding: 1px;
+}
+
+#nav-logo {
+  width: auto;
+  height: 50px;
+  border: solid 1px #fff;
+  border-radius: 10%;
+  margin-right: 10px;
+}
+
+/* Nav toggle - dropdown meny for mobile screens */
+#menu-icon:checked ~ nav {
+  display: block;
+}
+
+#menu-icon {
+  display: none;
+}
+
+.menu-icon-label {
+  font-size: 48px;
+  text-align: right;
+  display: flex;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+}
+
+/* Footer styles*/
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: sticky;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+#footer-text {
+  flex-direction: row;
+  justify-content: center;
+  align-items: left;
+  font-size: 10px;
+  display: flex;
+  gap: 1vw;
+}
+
+#footer-text a {
+  font-weight: 800;
+  text-decoration: none;
+  color: #ff0000;
+  font-size: 12px;
+  display: inline;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 5vw;
+  flex: 1;
+}
+
+.footer-icons li {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  gap: 5vw;
+  margin-right: 20px;
+}
+
+.red-icon {
+  color: #ff0000;
+  font-size: 22px;
+}
+
 /* Page specific styles */
 /* Home page */
 /* Title */
 .home-title {
   text-align: center;
-  background-color: #5c6269;
 }
 
+.home-title h1 {
+  font-size: 36px;
+}
 /* Intro section */
 .home-intro {
   text-align: center;
-  background-color: #5c6269;
 }
 
 .home-intro h1 {
-  color: #fff;
-  font-size: 24px;
-  margin: 0;
-  padding: 20px 0;
+  font-size: 36px;
 }
 
-/* Article */
-.home-article {
-  background-color: #5c6269;
-  color: #fff;
-  padding: 20px;
-  margin: 20px 0;
-}
+/* Article specific styles */
 
-/* About page */
+/* About page specific styles*/
+
+/* Media queries */
+/* Media query: medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  /* General styles */
+  * {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  body {
+    padding: 20px;
+  }
+
+  p {
+    padding: 15px;
+    margin: 0px;
+  }
+
+  a {
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 55px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  h2,
+  h3 {
+    font-size: 26px;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  ul {
+    padding: 15px;
+  }
+
+  /* Navigation bar styles */
+  .menu-icon-label {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  nav a {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 5vw;
+    border: none;
+    font-weight: 600;
+  }
+
+  .nav-links li {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #nav-logo {
+    width: auto;
+    height: 80px;
+  }
+}
